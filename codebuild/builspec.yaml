@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20
+    commands:
+      - npm install
+  build:
+    commands:
+      - npm run build
+      - cp appspec.yml dist/
+      - mkdir -p dist/scripts
+      - cp scripts/install.sh dist/scripts/
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: dist
