@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "tera-statebucket"
+    bucket = "debesh-terabucket"
     key    = "statefiles/terraform.tfstate"
     region = "ap-south-1"
   }
